@@ -35,4 +35,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
+private:
+	UFUNCTION()
+		void OnTimerEnableCollision();
+
+	bool bPauseHit;
+
+	FVector Velocity;
+
+	float DegreeToRotate;
+
+	FTimerHandle LoopTimer;
 };
